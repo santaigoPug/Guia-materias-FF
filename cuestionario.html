@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cuestionario Educativo - CECyTEM</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="diseño.css">
+</head>
+<body>
+  <script src="visit.js"></script>
+    <div id="wrapper">
+        <div id="nav-buttons">
+            <h3>Navegación</h3>
+            <button><a href="index.html">Inicio</a></button>
+            <button><a href="humanidades.html">Humanidades</a></button>
+            <button><a href="mate.html">Matemáticas</a></button>
+            <button><a href="recursos.html">Recursos Socioemocionales</a></button>
+            <button><a href="cultura.html">Cultura Digital</a></button>
+            <button><a href="cuestionario.html">Cuestionario</a></button>
+            <div class="visitor-info" aria-live="polite"></div>
+        </div>
+        
+        <div id="app-container">
+        <header>
+            <img src="cecytem.png" alt="Logo CECyTEM" class="logo">
+            <h1>Evaluación 3er Parcial</h1>
+        </header>
+
+        <main id="main-content">
+            <!-- Menu Principal -->
+            <section id="menu-screen" class="screen">
+                <h2>Selecciona un Tema para Comenzar</h2>
+                <div class="category-grid">
+                    <button class="category-btn" data-category="antropocentrismo" type="button">
+                        <span class="icon">🏛️</span>
+                        <span class="text">Antropocentrismo (Humanidades)</span>
+                    </button>
+                    <button class="category-btn" data-category="estafas" type="button">
+                        <span class="icon">💻</span>
+                        <span class="text">Estafas en la Web (Cultura Digital)</span>
+                    </button>
+                    <button class="category-btn" data-category="recoleccion" type="button">
+                        <span class="icon">📊</span>
+                        <span class="text">Recolección de Datos (Matemáticas)</span>
+                    </button>
+                    <button class="category-btn" data-category="planvida" type="button">
+                        <span class="icon">🌱</span>
+                        <span class="text">Plan de Vida (Socioemocional)</span>
+                    </button>
+                </div>
+            </section>
+
+            <!-- Pantalla del Quiz -->
+            <section id="quiz-screen" class="screen hidden">
+                <div class="quiz-header">
+                    <button id="back-to-menu" class="small-btn">Volver</button>
+                    <div id="progress-text">Pregunta 1 de 20</div>
+                </div>
+                <div class="progress-bar-container">
+                    <div id="progress-bar-fill"></div>
+                </div>
+                
+                <div id="question-container">
+                    <h3 id="question-number">Pregunta #</h3>
+                    <p id="question-text">Aquí va la pregunta...</p>
+                    <div id="options-container">
+                        <!-- Botones de opciones generados por JS -->
+                    </div>
+                </div>
+
+                <div class="controls">
+                    <button id="verify-btn" type="button" disabled>Verificar</button>
+                    <button id="next-btn" type="button" class="hidden">Siguiente</button>
+                </div>
+            </section>
+
+            <!-- Pantalla de Resultados -->
+            <section id="result-screen" class="screen hidden">
+                <h2>¡Quiz Finalizado!</h2>
+                <div class="result-card">
+                    <p id="result-summary">Has respondido correctamente X de 20 preguntas.</p>
+                    <div class="score-circle">
+                        <span id="final-score">0</span>
+                        <span class="score-label">PUNTOS</span>
+                    </div>
+                    <p id="performance-msg"></p>
+                </div>
+                <button id="restart-btn" type="button">Reiniciar</button>
+            </section>
+        </main>
+    </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

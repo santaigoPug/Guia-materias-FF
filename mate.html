@@ -1,0 +1,694 @@
+<!DOCTYPE html>
+<html lang="es">
+     <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Matemáticas</title>
+      <link rel="stylesheet" href="diseño.css">
+    </head>
+    <body>
+        <div id="wrapper">
+            <main id="main-content">
+                <a name="inicio"></a>
+                <h1>Matemáticas</h1>
+        <div class="card">
+            <script src="visit.js"></script>
+            <p>La estadística y la probabilidad son herramientas fundamentales para analizar datos, tomar decisiones informadas y comprender la incertidumbre.</p>
+        </div>
+
+        <div class="card1">
+            <h2>Temario</h2>
+            <h3>Primer Parcial</h3>
+            <ul> 
+                <a href="#estad"><li>Conceptos básicos de estadística</li></a>
+                <a href="#proba"><li>Conceptos básicos de probabilidad</li></a> 
+                <a href="#calculo"><li>Cálculo de probabilidades</li></a> 
+                <a href="#ley"><li>Ley de los grandes números</li></a> 
+            </ul>
+        </div>
+        <div class="card2">
+            <h3>Segundo parcial</h3>
+            <ul>
+                <a href="#clasi"><li>Tipos y clasificación de datos</li></a>
+                <a href="#recolec"><li>Técnicas de recolección de datos</li></a>
+                <a href="#analisis"><li>Presentación y análisis de datos</li></a>
+                <a href="#elementos"><li>Elementos básicos d estadística descriptiva</li></a>
+                <a href="#cualitativas"><li>Variables cualitativas</li></a>
+                <a href="#cuantitativas"><li>Variables cuantitativas</li></a>
+                <a href="#diagramas"><li>Diagramas de dispersión</li></a>
+                <a href="#correlacion"><li>Coeficiente de correlación</li></a>
+                <a href="#dispersion"><li>Dispersión</li></a>
+            </ul>
+        </div>
+        <div class="card3">
+            <h3>Tercer parcial</h3>
+            <ul>
+                <a href="#factorial"><li>factorial: definición y propiedades</li></a>
+                <a href="#conteo"><li>Técnicas de conteo: regla del producto, permutaciones y combinaciones</li></a>
+                <a href="#eventos"><li>Eventos dependientes, independientes y mutuamente excluyentes</li></a>
+                <a href="#compuestos"><li>Probabilidades de eventos compuestos</li></a>
+            </ul>
+        </div>
+        <div class="card1">
+            <a name="estad"></a>
+            <h4>Conceptos básicos de estadística</h4>
+            <p>
+Definición: Ciencia que recopila, organiza, analiza e interpreta datos para tomar decisiones.
+
+Tipos:
+
+Descriptiva: resume datos (tablas, gráficas, medidas).
+
+Inferencial: generaliza conclusiones a partir de muestras.</p>
+            <center><button><a href="#inicio">Regresar</a></button></center>
+        </div>
+        <div class="card1">
+            <a name="proba"></a>
+            <h4>Conceptos básicos de probabilidad</h4>
+            <p>Definición: mide la posibilidad de que ocurra un evento.
+
+Fórmula clásica:
+
+𝑃
+(
+𝐸
+)
+=
+Casos favorables
+Casos posibles
+Ejemplo 1:  
+Al lanzar un dado, la probabilidad de obtener un número par:
+Casos favorables = {2,4,6} → 3
+Casos posibles = 6
+
+𝑃
+(
+par
+)
+=
+3
+6
+=
+0.5
+Ejemplo 2:  
+Al sacar una carta de una baraja española (40 cartas), probabilidad de obtener un “as”:
+Casos favorables = 4
+Casos posibles = 40
+
+𝑃
+(
+as
+)
+=
+4
+40
+=
+0.1</p>
+            <center><button><a href="#inicio">Regresar</a></button></center>
+        </div>
+        <div class="card1">
+            <a name="calculo"></a>
+            <h4>Cálculo de probabilidades</h4>
+            <p>Regla de la suma:
+
+𝑃
+(
+𝐴
+∪
+𝐵
+)
+=
+𝑃
+(
+𝐴
+)
++
+𝑃
+(
+𝐵
+)
+−
+𝑃
+(
+𝐴
+∩
+𝐵
+)
+Regla del producto:
+
+𝑃
+(
+𝐴
+∩
+𝐵
+)
+=
+𝑃
+(
+𝐴
+)
+⋅
+𝑃
+(
+𝐵
+∣
+𝐴
+)
+Ejemplo 1:  
+Probabilidad de sacar un rey o un as de una baraja de 40 cartas:
+
+𝑃
+(
+rey
+)
+=
+4
+40
+,
+𝑃
+(
+as
+)
+=
+4
+40
+No se solapan →
+
+𝑃
+(
+rey ∪ as
+)
+=
+4
+40
++
+4
+40
+=
+8
+40
+=
+0.2
+Ejemplo 2:  
+Probabilidad de sacar dos cartas negras consecutivas de una baraja inglesa (52 cartas, 26 negras):
+
+𝑃
+(
+primera negra
+)
+=
+26
+52
+=
+0.5
+𝑃
+(
+segunda negra | primera negra
+)
+=
+25
+51
+𝑃
+(
+dos negras
+)
+=
+0.5
+⋅
+25
+51
+≈
+0.245</p>
+            <center><button><a href="#inicio">Regresar</a></button></center>
+            <img src="mate/probabilidad.jpeg">
+
+        </div>
+        <div class="card1">
+            <a name="ley"></a>
+            <h4>Ley de los grandes números</h4>
+            <p>Definición: al aumentar el número de repeticiones de un experimento, la frecuencia relativa tiende a la probabilidad teórica.
+
+Ejemplo 1:  
+Al lanzar una moneda 10 veces, puede salir 7 caras y 3 cruces.
+Frecuencia relativa ≈ 0.7 (se aleja de 0.5).
+Al lanzar 1000 veces, la proporción se acerca a 0.5.
+
+Ejemplo 2:  
+En un dado, la probabilidad teórica de obtener un “3” es 1/6 ≈ 0.166.
+Si lanzas 600 veces, esperarías ≈ 100 resultados de “3”.</p>
+            <center><button><a href="#inicio">Regresar</a></button></center>
+        </div>
+        <div class="card2">
+            <a name="clasi"></a>
+            <h4>Tipos y clasificación de datos</h4>
+            <p>Cualitativos: categorías (ej. color, género).
+
+Cuantitativos: números (ej. edad, peso).
+
+Discretos (enteros).
+
+Continuos (intervalos).</p>
+            <center><button><a href="#inicio">Regresar</a></button></center>
+        </div>
+        <div class="card2">
+            <a name="recolec"></a>
+            <h4>Técnicas de recolección de datos</h4>
+            <p>Encuestas, entrevistas, observación, experimentos.</p><br><br>
+            <center><button><a href="#inicio">Regresar</a></button><br><br>
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/N1UjyL_HNeM?si=Ajr-nkALV-iJ10uG" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            </center>
+        </div>
+        <div class="card2">
+            <a name="analisis"></a>
+            <h4>Presentación y analisis de datos</h4>
+            <p>Tablas de frecuencia.
+
+Gráficas: barras, pastel, histogramas.</p>
+            <center><button><a href="#inicio">Regresar</a></button></center>
+        </div>
+        <div class="card2">
+            <a name="elementos"></a>
+            <h4>Elementos básicos de estadística descriptiva</h4>
+            <p>Sirven para identificar el valor representativo de un conjunto de datos.
+
+Media (promedio):
+
+𝑥
+ˉ
+=
+∑
+𝑥
+𝑖
+𝑛
+Ejemplo 1: Calificaciones = {8, 9, 10} →
+𝑥
+ˉ
+=
+(
+8
++
+9
++
+10
+)
+/
+3
+=
+9
+.
+Ejemplo 2: Edades = {20, 22, 24, 26} →
+𝑥
+ˉ
+=
+92
+/
+4
+=
+23
+.
+
+Mediana: valor central cuando los datos están ordenados.
+Ejemplo 1: {2, 4, 6, 8, 10} → Mediana = 6.
+Ejemplo 2: {3, 7, 9, 12} → Mediana = (7+9)/2 = 8.
+
+Moda: valor que más se repite.
+Ejemplo 1: {1, 2, 2, 3, 4} → Moda = 2.
+Ejemplo 2: {5, 5, 6, 7, 7} → Modas = 5 y 7 (bimodal).</p>
+<p>Medidas de dispersión
+Indican qué tan alejados están los datos respecto a la media.
+
+Rango: diferencia entre el mayor y el menor valor.
+Ejemplo 1: {3, 7, 10} → Rango = 10 − 3 = 7.
+Ejemplo 2: {15, 20, 25, 30} → Rango = 30 − 15 = 15.
+
+Varianza: promedio de las desviaciones cuadráticas respecto a la media.
+
+𝜎
+2
+=
+∑
+(
+𝑥
+𝑖
+−
+𝑥
+ˉ
+)
+2
+𝑛
+Ejemplo 1: {2, 4} → Media = 3 → Varianza = [(2−3)²+(4−3)²]/2 = 1.
+Ejemplo 2: {1, 2, 3} → Media = 2 → Varianza = [(1−2)²+(2−2)²+(3−2)²]/3 = 0.67.
+
+Desviación estándar: raíz cuadrada de la varianza.
+Ejemplo 1: Varianza = 1 → σ = √1 = 1.
+Ejemplo 2: Varianza = 0.67 → σ ≈ 0.82.</p>
+<p>Medidas de posición
+Ubican un dato dentro de la distribución.
+
+Cuartiles: dividen los datos en 4 partes iguales.
+Ejemplo 1: {10, 20, 30, 40} → Q2 = Mediana = 25.
+Ejemplo 2: {5, 10, 15, 20, 25} → Q1 = 10, Q3 = 20.
+
+Percentiles: dividen en 100 partes.
+Ejemplo: En un examen, estar en el percentil 80 significa que superaste al 80% de los estudiantes.</p>
+<p>Representación gráfica
+Permite visualizar los datos.
+
+Histogramas: muestran frecuencias en intervalos.
+
+Gráficas de barras y pastel: comparan categorías.
+
+Diagramas de dispersión: muestran relación entre dos variables.
+
+Ejemplo 1: Ventas por mes → gráfica de barras.
+Ejemplo 2: Altura vs peso → diagrama de dispersión.</p>
+<p>Tablas de frecuencia
+Organizan los datos en intervalos o categorías.
+
+Ejemplo 1:
+Edades de 10 alumnos → {15, 16, 15, 17, 16, 15, 18, 17, 16, 15}
+Tabla:
+
+15 años → 4
+
+16 años → 3
+
+17 años → 2
+
+18 años → 1
+
+Ejemplo 2:
+Colores favoritos → {Rojo, Azul, Azul, Verde, Rojo, Azul}
+Tabla:
+
+Azul → 3
+
+Rojo → 2
+
+Verde → 1</p>
+            <center><button><a href="#inicio">Regresar</a></button></center>
+        </div>
+        <div class="card2">
+            <a name="cualitativas"></a>
+            <h4>Variables cualitativas </h4>
+            <p>Las variables cualitativas, también conocidas como categóricas, son aquellas que describen atributos o cualidades que no pueden medirse numéricamente. En lugar de expresar cantidades, estas variables clasifican los datos en categorías o grupos que comparten características comunes. Por ejemplo, el color de ojos (azul, verde, café), el estado civil (soltero, casado, divorciado) o el tipo de sangre (A, B, AB, O) son variables cualitativas. Estas variables pueden ser nominales, cuando no existe un orden lógico entre las categorías, u ordinales, cuando sí hay un orden jerárquico, como en los niveles educativos (primaria, secundaria, universidad). En la investigación, las variables cualitativas permiten explorar percepciones, opiniones y comportamientos, siendo fundamentales en estudios sociales, educativos y de mercado.</p>
+            <center><button><a href="#inicio">Regresar</a></button></center>
+        </div>
+        <div class="card2">
+            <a name="cuantitativas"></a>
+            <h4>Variables cuantitativas </h4>
+            <p>Las variables cuantitativas son aquellas que expresan cantidades y pueden ser medidas numéricamente. Estas variables permiten realizar operaciones matemáticas y análisis estadísticos, lo que las hace esenciales en investigaciones que buscan establecer relaciones, comparaciones o tendencias. Se dividen en discretas, cuando toman valores enteros (como el número de hijos o de automóviles en una familia), y continuas, cuando pueden asumir cualquier valor dentro de un rango (como la estatura, el peso o la temperatura). Las variables cuantitativas son clave en estudios experimentales y correlacionales, ya que permiten aplicar técnicas estadísticas para validar hipótesis, identificar patrones y tomar decisiones basadas en datos objetivos.</p>
+            <center><button><a href="#inicio">Regresar</a></button></center>
+        </div>
+        <div class="card2">
+            <a name="diagrama"></a>
+            <h4>Diagrama de despersión </h4>
+            <p>Diagrama de dispersión: puntos que muestran relación entre dos variables.
+
+Coeficiente de correlación (r): mide fuerza y dirección de relación (−1 ≤ r ≤ 1).
+
+Ejemplo 1:  
+Horas de estudio vs calificación → r ≈ 0.8 (correlación positiva fuerte).
+
+Ejemplo 2:  
+Temperatura vs ventas de helado → r ≈ 0.9 (correlación positiva).</p>
+            <center><button><a href="#inicio">Regresar</a></button></center>
+        </div>
+        <div class="card2">
+            <a name="correlacion"></a>
+            <h4>Coeficiente de correlación</h4>
+            <p>El coeficiente de correlación es una medida estadística que indica el grado de relación lineal entre dos variables cuantitativas. Su valor oscila entre -1 y +1. Un valor de +1 indica una correlación positiva perfecta (ambas variables aumentan juntas), -1 indica una correlación negativa perfecta (una variable aumenta mientras la otra disminuye), y 0 indica que no hay correlación lineal. El coeficiente más común es el coeficiente de correlación de Pearson (r), que se calcula a partir de la covarianza de las variables dividida entre el producto de sus desviaciones estándar. Por ejemplo, si se analiza la relación entre las horas de estudio y las calificaciones de los estudiantes, un coeficiente de r = 0.85 sugeriría una fuerte relación positiva: a mayor tiempo de estudio, mejores calificaciones</p>
+            <center><button><a href="#inicio">Regresar</a></button></center>
+        </div>
+        <div class="card2">
+            <a name="dispersion"></a>
+            <h4>Dispersión</h4>
+            <p>Las medidas de dispersión cuantifican el grado en que los valores de un conjunto de datos se alejan de su media o centro. Son fundamentales para entender la variabilidad de los datos y complementar las medidas de tendencia central (como la media o la mediana). Las principales medidas incluyen:
+
+Rango: diferencia entre el valor máximo y mínimo.
+
+Varianza: promedio de las desviaciones al cuadrado respecto a la media.
+
+Desviación estándar: raíz cuadrada de la varianza, expresa la dispersión en las mismas unidades que los datos.
+
+Rango intercuartílico (RIC): diferencia entre el tercer y el primer cuartil, útil para datos con valores atípicos.
+
+Por ejemplo, si dos grupos de estudiantes tienen la misma media de calificaciones pero uno tiene una desviación estándar mayor, significa que sus calificaciones están más dispersas, es decir, hay más variabilidad entre los estudiantes</p>
+            <center><button><a href="#inicio">Regresar</a></button></center>
+        </div>
+        <div class="card3">
+            <a name="factorial"></a>
+            <h4>Factorial: definición y propiedades</h4>
+            <p>Definición:
+
+𝑛
+!
+=
+𝑛
+⋅
+(
+𝑛
+−
+1
+)
+⋅
+(
+𝑛
+−
+2
+)
+⋯
+1
+Propiedades:
+
+0
+!
+=
+1
+.
+
+𝑛
+!
+=
+𝑛
+⋅
+(
+𝑛
+−
+1
+)
+!
+.
+
+Ejemplo 1:
+
+5
+!
+=
+5
+⋅
+4
+⋅
+3
+⋅
+2
+⋅
+1
+=
+120
+Ejemplo 2:
+
+7
+!
+=
+7
+⋅
+6
+!
+=
+7
+⋅
+720
+=
+5040</p>
+            <center><button><a href="#inicio">Regresar</a></button></center>
+        </div>
+          <div class="card3">
+            <a name="conteo"></a>
+            <h4>Técnicas de conteo: regla del producto, permutaciones y combinaciones</h4>
+            <p>Permutaciones (orden importa):
+
+𝑃
+(
+𝑛
+,
+𝑟
+)
+=
+𝑛
+!
+(
+𝑛
+−
+𝑟
+)
+!
+Combinaciones (orden no importa):
+
+𝐶
+(
+𝑛
+,
+𝑟
+)
+=
+𝑛
+!
+𝑟
+!
+(
+𝑛
+−
+𝑟
+)
+!
+Ejemplo 1 (Permutación):  
+¿Cuántas formas de ordenar 3 libros distintos en una repisa?
+
+𝑃
+(
+3
+,
+3
+)
+=
+3
+!
+0
+!
+=
+6
+Ejemplo 2 (Combinación):  
+¿Cuántas formas de elegir 2 estudiantes de un grupo de 5?
+
+𝐶
+(
+5
+,
+2
+)
+=
+5
+!
+2
+!
+⋅
+3
+!
+=
+10
+Permutaciones con repetición:
+
+𝑃
+=
+𝑛
+!
+𝑛
+1
+!
+⋅
+𝑛
+2
+!
+⋅
+⋯
+Ejemplo 1:  
+Ordenar las letras de “MAMÁ”:
+
+𝑃
+=
+4
+!
+2
+!
+⋅
+2
+!
+=
+24
+4
+=
+6
+Ejemplo 2:  
+Ordenar las letras de “PERRO”:
+
+𝑃
+=
+5
+!
+2
+!
+=
+120
+2
+=
+60</p>
+            <center><button><a href="#inicio">Regresar</a></button></center>
+            <img src="mate/permutaciones.jpeg">
+        </div>
+          <div class="card3">
+            <a name="eventos"></a>
+            <h4>Eventos dependientes, independientes y mutuamente excluyentes</h4>
+            <p>Dependientes: el resultado de uno afecta al otro.
+
+Independientes: no se afectan entre sí.
+
+Mutuamente excluyentes: no pueden ocurrir al mismo tiempo.
+
+Ejemplo 1 (Independientes):  
+Lanzar un dado y una moneda → resultados no se afectan.
+
+Ejemplo 2 (Mutuamente excluyentes):  
+Sacar una carta que sea “as” o “rey” → no pueden ser ambas a la vez.</p>
+            <center><button><a href="#inicio">Regresar</a></button></center>
+        </div>
+        <div class="card3">
+    <a name="compuestos"></a>
+    <h4>Probabilidades de eventos compuestos</h4>
+    <p>
+        En probabilidad, los eventos compuestos son aquellos que resultan de la combinación de dos o más eventos simples mediante operaciones como la unión, la intersección o el complemento. Para calcular su probabilidad se utilizan fórmulas específicas según la relación entre los eventos.
+    </p>
+    <p>
+        La probabilidad de la <strong>unión</strong> de dos eventos A y B (es decir, que ocurra A o B o ambos) está dada por:
+        <br>
+        <code>P(A ∪ B) = P(A) + P(B) − P(A ∩ B)</code>
+    </p>
+    <p>
+        Para la <strong>intersección</strong> (que ambos eventos ocurran al mismo tiempo), si los eventos son independientes, la probabilidad se calcula como:
+        <br>
+        <code>P(A ∩ B) = P(A) × P(B)</code>
+    </p>
+    <p>
+        El <strong>complemento</strong> de un evento A, que representa que A no ocurra, se obtiene como:
+        <br>
+        <code>P(A<sup>c</sup>) = 1 − P(A)</code>
+    </p>
+    <p>
+        También es importante distinguir entre eventos <strong>dependientes</strong> e <strong>independientes</strong>: en los primeros, la ocurrencia de uno afecta la probabilidad del otro, y en los segundos no. El estudio de los eventos compuestos permite calcular de forma precisa probabilidades de sucesos complejos a partir de eventos simples.
+    </p>
+    <center><button><a href="#inicio">Regresar</a></button></center>
+            </main>
+            <nav id="nav-buttons">
+                <h3>Navegación</h3>
+                <button><a href="index.html">Inicio</a></button>
+                <button><a href="humanidades.html">Humanidades</a></button>
+                <button><a href="mate.html">Matemáticas</a></button>
+                <button><a href="recursos.html">Recursos Socioemocionales</a></button>
+                <button><a href="cultura.html">Cultura Digital</a></button>
+                <button><a href="cuestionario.html">Cuestionario</a></button>
+                <div class="visitor-info" aria-live="polite"></div>
+            </nav>
+        </div>
+        <script src="visit.js"></script>
+    </body>
+</html>

@@ -1,0 +1,354 @@
+﻿h1{
+    font-size: 60px;
+    color: #221c9f;
+    text-align: center;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+body{
+    text-align: center;
+    margin: 0;
+    min-height: 100vh;
+    background: linear-gradient(to bottom, #34d399 0%, #065f46 100%);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    display: flex;
+    flex-direction: row;
+
+}
+img{
+    width: 60%;
+    height: 60%;
+}
+
+
+#wrapper {
+    display: flex;
+    flex: 1;
+    width: 100%;
+    height: 100%;
+    gap: 15px;
+    padding: 15px;
+    align-items: flex-start;
+}
+
+#main-content {
+    flex: 1;
+    overflow-y: auto;
+    padding: 20px;
+    order: 1;
+}
+
+#nav-buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 15px;
+    width: 180px;
+    background-color: rgba(255,255,255,0.95);
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+    order: 2;
+    flex-shrink: 0;
+    height: fit-content;
+    max-height: calc(100vh - 30px);
+}
+
+#nav-buttons h3 {
+    color: #008080;
+    font-size: 1rem;
+    margin: 0 0 10px 0;
+    text-align: center;
+    border-bottom: 2px solid #008080;
+    padding-bottom: 10px;
+}
+
+
+:root{
+    --btn-gradient: linear-gradient(90deg,#4f46e5,#06b6d4);
+    --btn-color: #ffffff;
+    --btn-radius: 8px;
+    --btn-padding: 0.6rem 1.1rem;
+    --btn-transition: 180ms ease;
+}
+
+button,
+input[type="submit"],
+input[type="button"],
+.btn{
+    -webkit-appearance: none;
+    appearance: none;
+    background: var(--btn-gradient);
+    color: var(--btn-color);
+    border: none;
+    padding: var(--btn-padding);
+    border-radius: var(--btn-radius);
+    font-weight: 600;
+    cursor: pointer;
+    transition: transform var(--btn-transition), box-shadow var(--btn-transition), opacity var(--btn-transition);
+    box-shadow: 0 6px 18px rgba(15,23,42,0.08);
+    text-decoration: none;
+    display: inline-block;
+    line-height: 1;
+}
+
+#nav-buttons button {
+    padding: 12px 10px;
+    width: 100%;
+    text-align: center;
+    display: block;
+}
+
+button:hover,
+input[type="submit"]:hover,
+input[type="button"]:hover,
+.btn:hover{
+    transform: translateY(-2px);
+    box-shadow: 0 10px 24px rgba(15,23,42,0.12);
+    opacity: 0.98;
+}
+
+button:active,
+input[type="submit"]:active,
+input[type="button"]:active,
+.btn:active{
+    transform: translateY(0);
+    box-shadow: 0 6px 14px rgba(15,23,42,0.08);
+}
+
+button:focus,
+input[type="submit"]:focus,
+input[type="button"]:focus,
+.btn:focus{
+    outline: 3px solid rgba(99,102,241,0.18);
+    outline-offset: 2px;
+}
+
+button[disabled],
+input[disabled]{
+    opacity: 0.56;
+    pointer-events: none;
+    transform: none;
+    box-shadow: none;
+}
+
+.btn-outline{
+    background: transparent;
+    color: #111827;
+    border: 2px solid rgba(17,24,39,0.08);
+}
+
+.btn-danger{
+    background: linear-gradient(90deg,#ef4444,#f97316);
+}
+
+@media (max-width: 480px){
+    button,
+    input[type="submit"],
+    input[type="button"],
+    .btn{
+        display:block;
+        width:100%;
+        padding: 0.75rem 1rem;
+    }
+}
+
+button a{
+    color: inherit;
+    text-decoration: none;
+    display: block;
+    width: 100%;
+    height: 100%;
+    
+}
+
+a.btn{
+    display: inline-block;
+    padding: var(--btn-padding);
+    border-radius: var(--btn-radius);
+    background: var(--btn-gradient);
+    color: var(--btn-color);
+    text-decoration: none;
+}
+
+/* Tarjetas para párrafos e imágenes */
+:root{
+    --card-bg: rgba(255,255,255,0.92);
+    --card-color: #063b2e;
+    --card-radius: 12px;
+    --card-padding: 1rem 1.25rem;
+    --card-shadow: 0 10px 30px rgba(2,6,23,0.10);
+}
+
+/* Estilo base de tarjeta (puedes usar la clase .card) */
+.card{
+    background: var(--card-bg);
+    color: var(--card-color);
+    border-radius: var(--card-radius);
+    padding: var(--card-padding);
+    box-shadow: var(--card-shadow);
+    margin: 1rem auto;
+    max-width: 900px;
+    transition: transform 180ms ease, box-shadow 180ms ease;
+}
+
+/* Aplicar tarjeta por defecto a todos los párrafos */
+p{
+    background: var(--card-bg);
+    color: var(--card-color);
+    border-radius: var(--card-radius);
+    padding: 0.9rem 1.1rem;
+    box-shadow: var(--card-shadow);
+    margin: 1rem auto;
+    max-width: 900px;
+    line-height: 1.6;
+    text-align: left;
+}
+
+/* Tarjeta para imágenes (hace la imagen responsiva y con marco) */
+img{
+    display: block;
+    margin: 1rem auto;
+    max-width: 92%;
+    height: auto;
+    background: var(--card-bg);
+    padding: 0.35rem;
+    border-radius: 10px;
+    box-shadow: 0 8px 22px rgba(2,6,23,0.09);
+}
+
+.card:hover, p:hover, img:hover{
+    transform: translateY(-4px);
+    box-shadow: 0 18px 40px rgba(2,6,23,0.12);
+}
+
+/* Ajustes para texto dentro de la tarjeta */
+.card p{ margin: 0; }
+
+@media (max-width: 520px){
+    p, .card{
+        padding: 0.9rem;
+        margin: 0.75rem 0.8rem;
+    }
+    img{ max-width: 100%; }
+}
+
+/* Caja que muestra visitas y la fecha/hora */
+.visit-box{
+    display: inline-block;
+    background: linear-gradient(135deg, #34d399 0%, #10b981 100%);
+    color: #ffffff;
+    padding: 0.7rem 1.2rem;
+    border-radius: 12px;
+    box-shadow: 0 8px 25px rgba(16, 185, 129, 0.25);
+    font-size: 0.95rem;
+    font-weight: 600;
+    border: 2px solid rgba(255, 255, 255, 0.3);
+    backdrop-filter: blur(8px);
+}
+
+/* Posicionar el contador fijo en la esquina superior izquierda */
+.visitor-info{
+    position: fixed;
+    top: 12px;
+    left: 12px;
+    z-index: 9999;
+    text-align: center;
+    filter: drop-shadow(0 4px 12px rgba(0, 0, 0, 0.15));
+}
+
+@media (max-width: 520px){
+    .visitor-info{
+        left: 50%;
+        right: auto;
+        transform: translateX(-50%);
+        top: 8px;
+    }
+    .visit-box{ font-size: 0.85rem; padding: 0.6rem 1rem; }
+}
+ 
+.card1{
+    background: var(--card-bg);
+    color: var(--card-color);
+    border-radius: var(--card-radius);
+    padding: var(--card-padding);
+    box-shadow: var(--card-shadow);
+    margin: 1rem auto;
+    max-width: 900px;
+    transition: transform 180ms ease, box-shadow 180ms ease;
+    
+    background-color: #e570b8;
+        text-align: left;
+
+}
+.card1:hover, p:hover, img:hover{
+    transform: translateY(-4px);
+    box-shadow: 0 18px 40px rgba(2,6,23,0.12);
+}
+
+/* Ajustes para texto dentro de la tarjeta */
+.card1 p{ margin: 0; }
+
+@media (max-width: 520px){
+    p, .card1{
+        padding: 0.9rem;
+        margin: 0.75rem 0.8rem;
+    }
+    img{ max-width: 100%; }
+}
+.card2{
+    background: var(--card-bg);
+    color: var(--card-color);
+    border-radius: var(--card-radius);
+    padding: var(--card-padding);
+    box-shadow: var(--card-shadow);
+    margin: 1rem auto;
+    max-width: 900px;
+    transition: transform 180ms ease, box-shadow 180ms ease;
+    background-color: #75bfdf;
+        text-align: left;
+
+}
+.card2:hover, p:hover, img:hover{
+    transform: translateY(-4px);
+    box-shadow: 0 18px 40px rgba(2,6,23,0.12);
+}
+
+/* Ajustes para texto dentro de la tarjeta */
+.card2 p{ margin: 0; }
+
+@media (max-width: 520px){
+    p, .card2{
+        padding: 0.9rem;
+        margin: 0.75rem 0.8rem;
+    }
+    img{ max-width: 100%; }
+}
+.card3{
+    background: var(--card-bg);
+    color: var(--card-color);
+    border-radius: var(--card-radius);
+    padding: var(--card-padding);
+    box-shadow: var(--card-shadow);
+    margin: 1rem auto;
+    max-width: 900px;
+    transition: transform 180ms ease, box-shadow 180ms ease;
+    background-color: #bde751;
+    text-align: left;
+}
+.card3:hover, p:hover, img:hover{
+    transform: translateY(-4px);
+    box-shadow: 0 18px 40px rgba(2,6,23,0.12);
+}
+
+/* Ajustes para texto dentro de la tarjeta */
+.card3 p{ margin: 0; }
+
+@media (max-width: 520px){
+    p, .card3{
+        padding: 0.9rem;
+        margin: 0.75rem 0.8rem;
+    }
+    img{ max-width: 100%; }
+}
+
+  
